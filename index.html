@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wandering Trails Humanities | Travel With Purpose in Nepal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldDeep: '#064E3B',
+                        amberWarm: '#D97706',
+                        earthSlate: '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .serif-heading { font-family: 'Playfair Display', serif; }
+        .hero-overlay { background: linear-gradient(180deg, rgba(6,78,59,0.7) 0%, rgba(15,23,42,0.95) 100%); }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-white text-xl">W</div>
+                <div>
+                    <span class="block font-bold text-lg leading-none tracking-tight text-white">Wandering Trails</span>
+                    <span class="text-xs text-amber-400 font-medium tracking-widest uppercase">Humanities</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-amber-400 transition">Our Mission</a>
+                <a href="#programs" class="hover:text-amber-400 transition">Programs</a>
+                <a href="#gorkha-itinerary" class="hover:text-amber-400 transition">Gorkha Itinerary</a>
+                <a href="#calculator" class="hover:text-amber-400 transition">Cost Estimator</a>
+                <a href="#apply" class="hover:text-amber-400 transition">Apply Now</a>
+            </nav>
+            <a href="#apply" class="bg-amber-600 hover:bg-amber-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition shadow-lg shadow-amber-600/20">
+                Begin Your Journey
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2000&q=80" alt="Himalayas Nepal" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-900/80 border border-emerald-500/30 text-emerald-300 text-xs font-semibold uppercase tracking-widest mb-6">
+                A Subsidiary of Wandering Trail Adventures
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                Travel With Purpose.<br><span class="text-amber-400 italic font-normal">Change Lives Along the Way.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Redefining tourism in Nepal by turning every journey into an act of service. Connect directly with remote communities, teach, build, and explore the breathtaking Himalayas.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#apply" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl text-lg transition shadow-xl shadow-emerald-900/50">
+                    Apply to Volunteer
+                </a>
+                <a href="#story" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-xl text-lg border border-slate-700 backdrop-blur-sm transition flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+                    Watch Impact Video
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Video Section -->
+    <section id="about" class="py-20 bg-slate-900 border-t border-slate-800 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-amber-500 text-sm font-bold uppercase tracking-widest">Our Philosophy</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">Tourism Shouldn't Just Take From Places. It Should Give Back.</h2>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    Wandering Trails Humanities bridges international volunteers with remote communities in Nepal. We believe travel is most transformative when built upon genuine connection and reciprocal growth.
+                </p>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    Rather than transactional volunteering, every initiative blends meaningful service projects—such as youth workshops, health post support, and eco-tourism—with local homestays and expert-guided Himalayan trekking.
+                </p>
+                <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
+                    <div>
+                        <span class="block text-3xl font-extrabold text-amber-400">100%</span>
+                        <span class="text-xs text-slate-400">Community-Led Projects</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-extrabold text-emerald-400">Gorkha</span>
+                        <span class="text-xs text-slate-400">Featured Program Region</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Feature Box (Fixed Embed Error 153) -->
+            <div id="story" class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-800/50">
+                <div class="aspect-video w-full">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube-nocookie.com/embed/svdKKpdMHIE?rel=0&enablejsapi=1" 
+                        title="Wandering Trails Humanities Nepal" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Gorkha Community Campaign Highlights</h3>
+                    <p class="text-sm text-slate-400">A look into our volunteer initiatives connecting travelers with rural schools and community workshops in the hills of Gorkha, Nepal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Programs Overview -->
+    <section id="programs" class="py-20 bg-slate-950 px-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 text-sm font-bold uppercase tracking-widest">Meaningful Pathways</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2">Volunteer & Service Programs</h2>
+                <p class="text-slate-400 mt-4">Every journey pairs community service with immersive cultural experiences and guided treks.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/50 transition">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-900/50 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-xl mb-6">01</div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Community Education & Art</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Lead youth skill workshops, creative arts, and conversational English sessions in rural Gorkha schools.</p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-4 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Duration: 1 to 8 Weeks</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Village Homestay Included</li>
+                    </ul>
+                    <a href="#apply" class="block text-center bg-slate-800 hover:bg-emerald-600 text-white font-semibold py-3 rounded-xl transition">Select Program</a>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-slate-900 rounded-2xl p-8 border border-amber-500/30 flex flex-col justify-between relative shadow-xl shadow-amber-950/20">
+                    <span class="absolute -top-3 right-6 bg-amber-500 text-slate-950 text-xs font-extrabold uppercase px-3 py-1 rounded-full">Most Popular</span>
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-900/50 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xl mb-6">02</div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Gorkha Trek & Serve Expedition</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Combines remote Gorkha village renovation and school service with scenic Himalayan foothill trekking.</p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-4 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Duration: 2 to 4 Weeks</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Guided Trek + Volunteer Work</li>
+                    </ul>
+                    <a href="#gorkha-itinerary" class="block text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition">View 14-Day Itinerary</a>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/50 transition">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-900/50 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-xl mb-6">03</div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Health & Eco-Tourism Support</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Assist local healthcare posts, promote eco-friendly tourism practices, and conduct sustainable living awareness drives.</p>
+                    </div>
+                    <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-4 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Duration: 2 to 12 Weeks</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Medical & Eco Backgrounds</li>
+                    </ul>
+                    <a href="#apply" class="block text-center bg-slate-800 hover:bg-emerald-600 text-white font-semibold py-3 rounded-xl transition">Select Program</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL ITINERARY: GORKHA PROGRAM -->
+    <section id="gorkha-itinerary" class="py-20 bg-slate-900 px-6 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-widest">Featured Expedition</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2">14-Day Gorkha Trek & Serve Itinerary</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">A detailed breakdown of our 2-week signature journey combining orientation, direct village service, cultural exchange, and Himalayan trekking.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Days 1-2 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 1 - 2</span>
+                        <span class="text-sm text-slate-400 font-medium">Kathmandu Valley</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Arrival, Cultural Orientation & Nepali Language Prep</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Arrive at Tribhuvan International Airport (KTM). Meet the Wandering Trails team and transfer to hotel. Day 2 includes comprehensive safety briefings, introductory Nepali language lessons, and a guided visit to iconic cultural landmarks including Boudhanath Stupa and Pashupatinath.
+                    </p>
+                </div>
+
+                <!-- Days 3-4 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 3 - 4</span>
+                        <span class="text-sm text-slate-400 font-medium">Kathmandu to Gorkha District</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Overland Journey to Gorkha & Host Family Welcome</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Scenic overland drive from Kathmandu into the lush mid-hill ridges of Gorkha. Tour historic Gorkha Durbar (palace) overlooking the Manaslu range. Meet your local host family, settle into the village homestay, and participate in a traditional welcome dinner.
+                    </p>
+                </div>
+
+                <!-- Days 5-9 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition bg-amber-950/10">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <span class="px-3 py-1 bg-amber-900/60 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 5 - 9</span>
+                        <span class="text-sm text-amber-400 font-medium">Remote Gorkha Village</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Hands-On Community Service & School Workshops</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Engage in core community service projects designed directly with local village leaders:
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                        <li>Facilitating art, storytelling, and conversational English workshops at the local school.</li>
+                        <li>Participating in school renovation, painting, or clean drinking water setup.</li>
+                        <li>Organizing health awareness sessions or youth sports exchanges.</li>
+                        <li>Evening cultural exchanges and cooking traditional Nepalese meals with host families.</li>
+                    </ul>
+                </div>
+
+                <!-- Days 10-12 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 10 - 12</span>
+                        <span class="text-sm text-slate-400 font-medium">Gorkha Foothills & Ridge Trek</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Guided Himalayan Ridge Trekking & Panoramic Views</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Embark on a 3-day guided eco-trek through pristine rural trails and rhododendron forests with views of Mount Manaslu and Ganesh Himal. Stay in local tea houses, experience remote mountain hospitality, and learn about flora and mountain ecology.
+                    </p>
+                </div>
+
+                <!-- Days 13-14 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 13 - 14</span>
+                        <span class="text-sm text-slate-400 font-medium">Return to Kathmandu & Departure</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Reflection, Farewell Ceremony & Airport Transfer</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Return drive to Kathmandu. Group reflection session and farewell dinner featuring traditional Nepali dance and music. Final shopping in Thamel and airport transfer for international flights.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE TRIP COST ESTIMATOR -->
+    <section id="calculator" class="py-20 bg-slate-950 px-6 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-emerald-400 text-sm font-bold uppercase tracking-widest">Transparent Pricing</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2">Interactive Trip Cost Estimator</h2>
+                <p class="text-slate-400 mt-2">Estimate your volunteer program fees based on duration and optional inclusions.</p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-10 grid md:grid-cols-12 gap-8 shadow-2xl">
+                <!-- Controls -->
+                <div class="md:col-span-7 space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">1. Select Program Track</label>
+                        <select id="calcProgram" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition">
+                            <option value="1200">Community Education & Art (Base $1,200)</option>
+                            <option value="1450" selected>Gorkha Trek & Serve Expedition (Base $1,450)</option>
+                            <option value="1300">Health & Eco-Tourism Support (Base $1,300)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-bold text-slate-300 uppercase tracking-wider">2. Duration (Weeks)</label>
+                            <span id="weeksValue" class="text-amber-400 font-bold text-sm">2 Weeks</span>
+                        </div>
+                        <input type="range" id="calcWeeks" min="1" max="8" value="2" class="w-full accent-amber-500 cursor-pointer">
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span>1 Wk</span>
+                            <span>2 Wks</span>
+                            <span>4 Wks</span>
+                            <span>8 Wks</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-3">3. Optional Add-ons</label>
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800/80 cursor-pointer hover:border-slate-700 transition">
+                                <input type="checkbox" id="addonAirport" value="50" checked class="accent-amber-500 w-4 h-4">
+                                <span class="text-xs text-slate-300">Private Kathmandu Airport Pickup & Transfers (+$50)</span>
+                            </label>
+                            <label class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800/80 cursor-pointer hover:border-slate-700 transition">
+                                <input type="checkbox" id="addonLang" value="100" checked class="accent-amber-500 w-4 h-4">
+                                <span class="text-xs text-slate-300">Extended Intensive Language & Cultural Prep Class (+$100)</span>
+                            </label>
+                            <label class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800/80 cursor-pointer hover:border-slate-700 transition">
+                                <input type="checkbox" id="addonPorter" value="150" class="accent-amber-500 w-4 h-4">
+                                <span class="text-xs text-slate-300">Dedicated Porter Support for Trekking Portions (+$150)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Display Box -->
+                <div class="md:col-span-5 bg-slate-950 p-6 rounded-2xl border border-amber-500/30 flex flex-col justify-between items-center text-center">
+                    <div>
+                        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Estimated Total Fee</span>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-amber-400 my-4" id="totalPrice">$1,600</div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Includes homestay accommodation, 2 meals daily, orientation, project materials, and emergency support.
+                        </p>
+                    </div>
+                    <div class="w-full mt-6">
+                        <a href="#apply" class="block w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-sm transition">
+                            Apply For This Plan
+                        </a>
+                        <span class="block text-[10px] text-slate-500 mt-2">* Excludes international flights to Nepal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form connected to Google Sheets -->
+    <section id="apply" class="py-20 bg-slate-900 px-6 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-widest">Start Your Application</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Join Our Next Expedition</h2>
+                <p class="text-slate-400 mt-2">Fill out the interest form below. Our team at Wandering Trails Humanities will contact you directly within 24 hours.</p>
+            </div>
+
+            <form id="volunteerForm" class="bg-slate-950 p-8 sm:p-10 rounded-2xl border border-slate-800 space-y-6 shadow-2xl">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
+                        <input type="text" name="fullName" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition" placeholder="Jane Doe">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+                        <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition" placeholder="jane@example.com">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Country of Residence *</label>
+                        <input type="text" name="country" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition" placeholder="United States, UK, etc.">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Program *</label>
+                        <select name="program" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition">
+                            <option value="Education & Art">Community Education & Art</option>
+                            <option value="Gorkha Trek & Serve Expedition" selected>Gorkha Trek & Serve Expedition</option>
+                            <option value="Health & Eco Tourism">Health & Eco-Tourism Support</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Estimated Travel Dates & Questions</label>
+                    <textarea name="message" rows="4" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition" placeholder="Tell us about your background, desired dates, or questions..."></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-4 rounded-xl text-lg transition shadow-xl shadow-amber-600/20">
+                    Submit Application
+                </button>
+
+                <div id="statusMessage" class="hidden text-center p-4 rounded-xl text-sm font-semibold"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-6 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="block font-bold text-white text-base">Wandering Trails Humanities</span>
+                <span class="text-xs text-slate-500">A Subsidiary of Wandering Trail Adventures Pvt. Ltd., Nepal</span>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 Wandering Trails Humanities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Active Google Apps Script Deployment URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby2b_znApweP7p1sjl9EASqVrMROgZxuMkvi0BzA_xMzaOym_4l8TpL5hoJ5hGHdyP7/exec';
+
+        // --- FORM SUBMISSION TO GOOGLE SHEETS ---
+        const form = document.getElementById('volunteerForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting Application...';
+            statusMessage.classList.add('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            data.timestamp = new Date().toISOString();
+
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                showStatus('Thank you! Your application has been logged into our system. We will contact you shortly.', 'bg-emerald-900/50 text-emerald-300 border border-emerald-500/30');
+                form.reset();
+            } catch (err) {
+                showStatus('There was an error submitting your application. Please try again.', 'bg-red-900/50 text-red-300 border border-red-500/30');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            }
+        });
+
+        function showStatus(text, bgClasses) {
+            statusMessage.className = `text-center p-4 rounded-xl text-sm font-semibold ${bgClasses}`;
+            statusMessage.textContent = text;
+            statusMessage.classList.remove('hidden');
+        }
+
+        // --- TRIP COST ESTIMATOR CALCULATOR ---
+        const calcProgram = document.getElementById('calcProgram');
+        const calcWeeks = document.getElementById('calcWeeks');
+        const weeksValue = document.getElementById('weeksValue');
+        const addonAirport = document.getElementById('addonAirport');
+        const addonLang = document.getElementById('addonLang');
+        const addonPorter = document.getElementById('addonPorter');
+        const totalPrice = document.getElementById('totalPrice');
+
+        function updateCost() {
+            const basePrice = parseInt(calcProgram.value);
+            const weeks = parseInt(calcWeeks.value);
+            weeksValue.textContent = weeks === 1 ? '1 Week' : `${weeks} Weeks`;
+
+            // Weekly addition rate ($250 per extra week beyond week 1)
+            const extraWeeksCost = (weeks - 1) * 250;
+
+            let addOns = 0;
+            if (addonAirport.checked) addOns += parseInt(addonAirport.value);
+            if (addonLang.checked) addOns += parseInt(addonLang.value);
+            if (addonPorter.checked) addOns += parseInt(addonPorter.value);
+
+            const total = basePrice + extraWeeksCost + addOns;
+            totalPrice.textContent = `$${total.toLocaleString()}`;
+        }
+
+        calcProgram.addEventListener('change', updateCost);
+        calcWeeks.addEventListener('input', updateCost);
+        addonAirport.addEventListener('change', updateCost);
+        addonLang.addEventListener('change', updateCost);
+        addonPorter.addEventListener('change', updateCost);
+
+        // Initial Calculation
+        updateCost();
+    </script>
+</body>
+</html>
