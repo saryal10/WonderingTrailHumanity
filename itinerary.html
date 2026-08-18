@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+        
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Itinerary | Wandering Trails Humanities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldDeep: '#064E3B',
+                        amberWarm: '#D97706',
+                        earthSlate: '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .serif-heading { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-amber-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden pt-20">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="img/logo.jpg" alt="Wandering Trails Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-emerald-500/50 shadow-md">
+                    <div>
+                        <span class="block font-bold text-base sm:text-lg leading-none tracking-tight text-white">Wandering Trails</span>
+                        <span class="text-[10px] sm:text-xs text-amber-400 font-medium tracking-widest uppercase">Humanities</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html#about" class="hover:text-amber-400 transition">Our Mission</a>
+                <a href="index.html#stories" class="hover:text-amber-400 transition">Impact Videos</a>
+                <a href="events.html" class="hover:text-amber-400 transition">Events</a>
+                <a href="programs.html" class="hover:text-amber-400 transition">Programs</a>
+                <a href="itinerary.html" class="text-amber-400 font-semibold">Sample Itinerary</a>
+                <a href="calculator.html" class="hover:text-amber-400 transition">Cost Estimator</a>
+                <a href="apply.html" class="hover:text-amber-400 transition">Apply Now</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#apply" class="hidden sm:inline-block bg-amber-600 hover:bg-amber-500 text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition shadow-lg shadow-amber-600/20">
+                    Begin Your Journey
+                </a>
+                <button id="menuToggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="index.html#about" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Our Mission</a>
+            <a href="index.html#stories" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Impact Videos</a>
+            <a href="events.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Events</a>
+            <a href="index.html#programs" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Programs</a>
+            <a href="itinerary.html" class="block text-amber-400 font-semibold text-sm py-1">Sample Itinerary</a>
+            <a href="index.html#calculator" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Cost Estimator</a>
+            <a href="index.html#apply" class="block text-amber-400 font-semibold text-sm py-1">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="py-12 bg-slate-950 border-b border-slate-800 text-center px-4">
+        <span class="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-widest">Featured Expedition</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Sample Itinerary (14 Days)</h1>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-2xl mx-auto">A detailed breakdown of our signature 2-week journey combining orientation, direct village service, cultural exchange, and Himalayan trekking across rural Nepal.</p>
+    </section>
+
+    <!-- Itinerary Content -->
+    <section class="py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto space-y-4 sm:space-y-6">
+            <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 1 - 2</span>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Kathmandu Valley</span>
+                </div>
+                <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Arrival, Cultural Orientation & Nepali Language Prep</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Arrive at Tribhuvan International Airport (KTM). Meet the Wandering Trails team and transfer to hotel. Day 2 includes comprehensive safety briefings, introductory Nepali language lessons, and a guided visit to iconic cultural landmarks including Boudhanath Stupa and Pashupatinath.
+                </p>
+            </div>
+
+            <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 3 - 4</span>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Kathmandu to Expedition Region</span>
+                </div>
+                <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Overland Journey & Host Family Welcome</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Scenic overland drive from Kathmandu into the lush mid-hill ridges of rural Nepal. Tour historic local heritage sites overlooking Himalayan mountain ranges. Meet your local host family, settle into the village homestay, and participate in a traditional welcome dinner.
+                </p>
+            </div>
+
+            <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition bg-amber-950/10">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <span class="px-3 py-1 bg-amber-900/60 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 5 - 9</span>
+                    <span class="text-xs sm:text-sm text-amber-400 font-medium">Remote Village Community</span>
+                </div>
+                <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Hands-On Community Service & School Workshops</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                    Engage in core community service projects designed directly with local village leaders:
+                </p>
+                <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                    <li>Facilitating art, storytelling, and conversational English workshops at the local school.</li>
+                    <li>Participating in school renovation, painting, or clean drinking water setup.</li>
+                    <li>Organizing health awareness sessions, specialty clinics, or youth sports exchanges.</li>
+                    <li>Evening cultural exchanges and cooking traditional Nepalese meals with host families.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 10 - 12</span>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Foothills & Himalayan Ridge Trek</span>
+                </div>
+                <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Guided Himalayan Ridge Trekking & Panoramic Views</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Embark on a 3-day guided eco-trek through pristine rural trails and rhododendron forests with views of snow-capped Himalayan peaks. Stay in local tea houses, experience mountain hospitality, and learn about flora and mountain ecology.
+                </p>
+            </div>
+
+            <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 13 - 14</span>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Return to Kathmandu & Departure</span>
+                </div>
+                <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Reflection, Farewell Ceremony & Airport Transfer</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Return drive to Kathmandu. Group reflection session and farewell dinner featuring traditional Nepali dance and music. Final shopping in Thamel and airport transfer for international flights.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-10 px-4 sm:px-6 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <div>
+                <span class="block font-bold text-white text-base">Wandering Trails Humanities</span>
+                <span class="text-xs text-slate-500">A Subsidiary of Wandering Trail Adventures Pvt. Ltd., Nepal</span>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 Wandering Trails Humanities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>

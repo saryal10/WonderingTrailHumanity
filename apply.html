@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+        
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Next Expedition | Wandering Trails Humanities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldDeep: '#064E3B',
+                        amberWarm: '#D97706',
+                        earthSlate: '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .serif-heading { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-amber-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden pt-20">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="img/logo.jpg" alt="Wandering Trails Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-emerald-500/50 shadow-md">
+                <div>
+                    <span class="block font-bold text-base sm:text-lg leading-none tracking-tight text-white">Wandering Trails</span>
+                    <span class="text-[10px] sm:text-xs text-amber-400 font-medium tracking-widest uppercase">Humanities</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html#about" class="hover:text-amber-400 transition">Our Mission</a>
+                <a href="index.html#stories" class="hover:text-amber-400 transition">Impact Videos</a>
+                <a href="events.html" class="hover:text-amber-400 transition">Events</a>
+                <a href="programs.html" class="hover:text-amber-400 transition">Programs</a>
+                <a href="itinerary.html" class="hover:text-amber-400 transition">Sample Itinerary</a>
+                <a href="calculator.html" class="hover:text-amber-400 transition">Cost Estimator</a>
+                <a href="apply.html" class="text-amber-400 font-semibold">Apply Now</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="apply.html" class="hidden sm:inline-block bg-amber-600 hover:bg-amber-500 text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition shadow-lg shadow-amber-600/20">
+                    Begin Your Journey
+                </a>
+                <button id="menuToggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="index.html#about" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Our Mission</a>
+            <a href="index.html#stories" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Impact Videos</a>
+            <a href="events.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Events</a>
+            <a href="programs.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Programs</a>
+            <a href="itinerary.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Sample Itinerary</a>
+            <a href="calculator.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Cost Estimator</a>
+            <a href="apply.html" class="block text-amber-400 font-semibold text-sm py-1">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="py-12 bg-slate-950 border-b border-slate-800 text-center px-4">
+        <span class="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-widest">Start Your Application</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Join Our Next Expedition</h1>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-2xl mx-auto">Fill out the interest form below. Our team at Wandering Trails Humanities will contact you directly within 24 hours.</p>
+    </section>
+
+    <!-- Application Form -->
+    <section class="py-16 px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto">
+            <form id="volunteerForm" class="bg-slate-950 p-6 sm:p-10 rounded-2xl border border-slate-800 space-y-5 sm:space-y-6 shadow-2xl">
+                <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
+                        <input type="text" name="fullName" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition" placeholder="Jane Doe">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+                        <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition" placeholder="jane@example.com">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Country of Residence *</label>
+                        <input type="text" name="country" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition" placeholder="United States, UK, etc.">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Program *</label>
+                        <select name="program" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition">
+                            <option value="Education & Art">Community Education & Art</option>
+                            <option value="Hidden Nepal Trek & Service" selected>Hidden Nepal Trek & Service Expedition</option>
+                            <option value="Health & Eco Tourism">Health & Eco-Tourism Support</option>
+                            <option value="Specialized Skill Outreach">Specialized Skill Outreach</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Estimated Travel Dates & Questions</label>
+                    <textarea name="message" rows="4" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition" placeholder="Tell us about your background, specialized skills, desired trip length in days, or questions..."></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 sm:py-4 rounded-xl text-base sm:text-lg transition shadow-xl shadow-amber-600/20">
+                    Submit Application
+                </button>
+
+                <div id="statusMessage" class="hidden text-center p-4 rounded-xl text-sm font-semibold"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-10 px-4 sm:px-6 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <div>
+                <span class="block font-bold text-white text-base">Wandering Trails Humanities</span>
+                <span class="text-xs text-slate-500">A Subsidiary of Wandering Trail Adventures Pvt. Ltd., Nepal</span>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 Wandering Trails Humanities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwcQVCi-IjrZtoxCiwsFINzCnqWUdGzSzUHf7Ebf5kTY2PZp2DO8PSBnYY8BdF4zrxz/exec';
+
+        const form = document.getElementById('volunteerForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting Application...';
+            statusMessage.classList.add('hidden');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            data.timestamp = new Date().toISOString();
+
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                showStatus('Thank you! Your application has been logged into our system. We will contact you shortly.', 'bg-emerald-900/50 text-emerald-300 border border-emerald-500/30');
+                form.reset();
+            } catch (err) {
+                showStatus('There was an error submitting your application. Please try again.', 'bg-red-900/50 text-red-300 border border-red-500/30');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            }
+        });
+
+        function showStatus(text, bgClasses) {
+            statusMessage.className = `text-center p-4 rounded-xl text-sm font-semibold ${bgClasses}`;
+            statusMessage.textContent = text;
+            statusMessage.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
