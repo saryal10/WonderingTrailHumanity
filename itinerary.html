@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-        
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Metadata -->
-    <title>Sample Itinerary | Service Learning & Trekking in Nepal</title>
-    <meta name="description" content="14-day sample itinerary combining hands-on service learning in Nepal with guided Himalayan trekking and village homestays.">
-    <meta name="keywords" content="service learning in Nepal itinerary, Volunteering in nepal trekking, 14 day Nepal volunteer trip">
+    <title>Recommended Itineraries | Service Learning & Wildlife Expeditions in Nepal</title>
+    <meta name="description" content="Explore multi-day sample itineraries combining hands-on service learning in Nepal with guided wildlife expeditions and village immersion.">
+    <meta name="keywords" content="service learning Nepal itinerary, Chitwan Machan camping, Nepal volunteer trip">
     <link rel="canonical" href="https://wanderingtrailhumanity.org/itinerary.html">
 
     <!-- Favicon -->
@@ -35,10 +32,18 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         h1, h2, h3, .serif-heading { font-family: 'Playfair Display', serif; }
+        .tab-btn.active {
+            color: #fbbf24;
+            border-bottom-color: #f59e0b;
+            background-color: rgba(30, 41, 59, 0.5);
+        }
+        /* Custom scrollbar utility for horizontal tab navigation */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 
-<body class="bg-slate-900 text-slate-100 antialiased selection:bg-amber-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden pt-20">
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-amber-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden pt-16 sm:pt-20">
 
     <!-- Navigation Header -->
     <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
@@ -58,8 +63,7 @@
                 <a href="index.html#stories" class="hover:text-amber-400 transition">Impact Videos</a>
                 <a href="events.html" class="hover:text-amber-400 transition">Events</a>
                 <a href="programs.html" class="hover:text-amber-400 transition">Programs</a>
-                <a href="itinerary.html" class="text-amber-400 font-semibold">Sample Itinerary</a>
-                <a href="calculator.html" class="hover:text-amber-400 transition">Cost Estimator</a>
+                <a href="itinerary.html" class="text-amber-400 font-semibold">Recommended Itinerary</a>
                 <a href="about.html" class="hover:text-amber-400 transition">Meet Our Team</a>
             </nav>
 
@@ -73,27 +77,311 @@
             </div>
         </div>
 
-        <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3">
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3 max-h-[calc(100vh-65px)] overflow-y-auto">
             <a href="index.html#about" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Our Mission</a>
             <a href="index.html#stories" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Impact Videos</a>
             <a href="events.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Events</a>
             <a href="programs.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Programs</a>
-            <a href="itinerary.html" class="block text-amber-400 font-semibold text-sm py-1">Sample Itinerary</a>
-            <a href="calculator.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Cost Estimator</a>
-             <a href="about.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Meet Our Team</a>
+            <a href="itinerary.html" class="block text-amber-400 font-semibold text-sm py-1">Recommended Itinerary</a>
+            <a href="about.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Meet Our Team</a>
         </div>
     </header>
 
+    <!-- Sticky Itinerary Duration Tabs Navigation -->
+    <div class="sticky top-[61px] sm:top-[73px] z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-start sm:justify-center gap-2 sm:gap-6 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap no-scrollbar">
+                <button onclick="switchTab('3-day')" id="tab-3-day" class="tab-btn px-4 py-3 sm:py-4 text-slate-400 border-b-2 border-transparent hover:text-amber-400 transition flex items-center gap-2 flex-shrink-0">
+                    <span>3-Day Itinerary</span>
+                </button>
+                <button onclick="switchTab('4-day')" id="tab-4-day" class="tab-btn active px-4 py-3 sm:py-4 text-slate-400 border-b-2 border-transparent hover:text-amber-400 transition flex items-center gap-2 flex-shrink-0">
+                    <span class="inline-block w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span>4-Day Itinerary</span>
+                </button>
+                <button onclick="switchTab('15-day')" id="tab-15-day" class="tab-btn px-4 py-3 sm:py-4 text-slate-400 border-b-2 border-transparent hover:text-amber-400 transition flex items-center gap-2 flex-shrink-0">
+                    <span>15-Day Expedition</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Banner -->
-    <section class="py-12 bg-slate-950 border-b border-slate-800 text-center px-4">
-        <span class="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-widest">Featured Expedition</span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Sample Itinerary (14 Days)</h1>
-        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-2xl mx-auto">A detailed breakdown of our signature 2-week journey combining orientation, direct village service, cultural exchange, and Himalayan trekking across rural Nepal.</p>
+    <section class="py-10 sm:py-12 bg-slate-950 border-b border-slate-800 text-center px-4">
+        <span class="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-widest">Wandering Trail Humanity — Travel With Purpose</span>
+        <h1 id="page-title" class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Hidden Chitwan: 4-Day Journey</h1>
+        <p id="page-description" class="text-slate-400 text-sm sm:text-base mt-3 max-w-2xl mx-auto">Machan Camping, Wildlife & Community Camp with Rural Children. Experience Nepal beyond sightseeing and leave something meaningful behind.</p>
     </section>
 
-    <!-- Itinerary Content -->
-    <section class="py-16 px-4 sm:px-6">
-        <div class="max-w-5xl mx-auto space-y-4 sm:space-y-6">
+    <!-- TAB CONTENT: 3-DAY ITINERARY -->
+    <div id="content-3-day" class="tab-content hidden py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto text-center py-12 bg-slate-950 rounded-2xl border border-slate-800">
+            <h2 class="text-2xl font-bold text-white mb-2">3-Day Express Itinerary</h2>
+            <p class="text-slate-400 text-sm max-w-md mx-auto mb-6">A condensed experience focused on core village service and essential wildlife sightings.</p>
+            <span class="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold rounded-full">Itinerary details coming soon</span>
+        </div>
+    </div>
+
+    <!-- TAB CONTENT: 4-DAY ITINERARY -->
+    <div id="content-4-day" class="tab-content py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto space-y-8">
+            
+            <!-- Overview & Purpose Card -->
+            <div class="bg-gradient-to-br from-slate-950 to-slate-900 p-6 sm:p-8 rounded-2xl border border-amber-500/30 shadow-xl">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                    <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider rounded-full">Private Experience • Max 10 Guests</span>
+                    <span class="text-xs text-slate-400">Fully Customizable</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-white mb-3">Your Trip Has a Purpose</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Leave the crowds of Sauraha behind and journey deep into the quieter landscapes of Madi Valley. Sleep beneath the stars on a traditional elevated Machan, share meaningful moments with children at a rural community school, watch the sun disappear where the Rapti and Narayani rivers meet, and explore the wetlands of Bishazari Tal.
+                </p>
+                <div class="p-4 bg-emerald-950/40 border border-emerald-500/30 rounded-xl text-xs sm:text-sm text-emerald-200">
+                    <strong class="font-bold text-emerald-400">Community Reinvestment:</strong> Wandering Trail Humanity reinvests the profit from this experience directly into future community camps, educational workshops, health, dental, and eye initiatives for underserved rural schools in Nepal.
+                </div>
+            </div>
+
+            <!-- Highlights Grid -->
+            <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800">
+                <h2 class="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <span class="text-amber-400">✨</span> Experience Highlights
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Discover the hidden and peaceful side of Chitwan</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Travel privately from Kathmandu with an experienced local guide</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Spend 2 nights Machan camping in Madi Valley</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Wake up surrounded by the sounds of rural Nepal</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Spend 2 meaningful days with children and teachers at a community school</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Share your professional skills, knowledge or passion</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Experience authentic village life and local hospitality</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Watch an unforgettable sunset at Golghat</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> See the landscape where the Rapti and Narayani rivers meet</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Stay in peaceful Patihani on Night 3</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Explore Bishazari Tal (Twenty Thousand Lakes)</div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400">•</span> Search for rhinos, deer, crocodiles, and resident/migratory birds</div>
+                </div>
+            </div>
+
+            <!-- Timeline / Itinerary Days -->
+            <div class="space-y-6">
+                <h2 class="text-xl sm:text-2xl font-bold text-white mb-6">🌿 Your 4-Day Journey</h2>
+
+                <!-- Day 1 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Day 1</span>
+                        <span class="text-xs text-slate-400 font-medium">Kathmandu → Madi Valley</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Into the Hidden Side of Chitwan</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Your journey begins with a private pickup from your Kathmandu hotel. Leave the busy capital behind and travel south toward Chitwan, gradually moving into quieter countryside and rural communities. Continue into Madi Valley, one of the less-visited areas of Chitwan. Settle into your tent set on a traditional elevated wooden Machan platform. Dinner is served at camp.
+                    </p>
+                    <div class="mt-3 text-xs text-amber-400/90 font-medium">Overnight: Machan Tent Camp, Madi</div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition bg-amber-950/10">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                        <span class="px-3 py-1 bg-amber-900/60 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Day 2</span>
+                        <span class="text-xs text-amber-400 font-medium">Community School Immersion</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Community, Connection & Purpose</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                        Travel to a local community school serving an underprivileged community. Host customized workshops tailored around your skills, profession, or passion:
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-slate-400 mb-3">
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">🎨 Art & Creativity</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">📚 Education & English</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">💻 Digital & Computers</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">🩺 Health & Hygiene</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">⚽ Sports & Games</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">🌱 Environment</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">📷 Photography</div>
+                        <div class="bg-slate-900 p-2 rounded border border-slate-800 text-center">💡 Career Skills</div>
+                    </div>
+                    <div class="text-xs text-amber-400/90 font-medium">Overnight: Machan Tent Camp, Madi</div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Day 3</span>
+                        <span class="text-xs text-slate-400 font-medium">Madi → Golghat → Patihani</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Community Impact, Golghat Sunset & Patihani</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Return to the school for your second day of workshop activities and complete your community project. Continue toward Golghat to watch the sun sink over the river landscape where the Rapti and Narayani rivers meet. Afterward, transfer to Patihani and check into your hotel.
+                    </p>
+                    <div class="mt-3 text-xs text-amber-400/90 font-medium">Overnight: Hotel in Patihani</div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                        <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Day 4</span>
+                        <span class="text-xs text-slate-400 font-medium">Bishazari Tal → Kathmandu</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Bishazari Tal Wildlife Exploration & Return</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Head toward Bishazari Tal (Twenty Thousand Lakes). Explore the protected wetlands by private vehicle with your guide searching for rhinos, deer, crocodiles, monkeys, and birds of prey. Enjoy lunch before returning to Kathmandu for hotel drop-off.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Inclusions / Exclusions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-emerald-400">✓</span> What's Included
+                    </h3>
+                    <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+                        <li>Private transportation throughout the experience</li>
+                        <li>Experienced English-speaking guide/driver</li>
+                        <li>Kathmandu hotel pickup and drop-off</li>
+                        <li>Fuel and driver costs</li>
+                        <li>2 nights Machan tent camping in Madi (tent, pillow, sleeping bag)</li>
+                        <li>2 days of community school/workshop activities & coordination</li>
+                        <li>1 night hotel accommodation in Patihani</li>
+                        <li>Meals according to the itinerary</li>
+                        <li>Private vehicle exploration of Bishazari Tal</li>
+                        <li>Golghat visit and sunset experience</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                        <span class="text-rose-400">✕</span> What's Not Included
+                    </h3>
+                    <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+                        <li>Chitwan National Park entrance fee</li>
+                        <li>Bishazari Tal or other applicable entrance fees</li>
+                        <li>National park, conservation or community fees</li>
+                        <li>Extra food and drinks / Alcoholic beverages</li>
+                        <li>Travel, medical, or emergency insurance</li>
+                        <li>Personal expenses, tips & optional activities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Interactive Cost Calculator (4-Day) -->
+            <div id="calculator" class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-amber-500/40 shadow-2xl">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-amber-400 text-xl">🧮</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">4-Day Trip Cost Calculator</h3>
+                </div>
+                <p class="text-slate-400 text-xs sm:text-sm mb-6">Select the number of travelers and optional add-ons to estimate your total journey cost.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Calculator Inputs -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <!-- Group Size Selection -->
+                        <div>
+                            <label for="travelerCount" class="block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-2">Number of Travelers</label>
+                            <select id="travelerCount" class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl p-3 focus:outline-none focus:border-amber-400 transition">
+                                <option value="1">1 Person ($795/person)</option>
+                                <option value="2" selected>2 People ($675/person)</option>
+                                <option value="3">3 People ($625/person)</option>
+                                <option value="4">4 People ($595/person)</option>
+                                <option value="5">5 People ($575/person)</option>
+                                <option value="6">6 People ($555/person)</option>
+                                <option value="7">7 People ($540/person)</option>
+                                <option value="8">8 People ($525/person)</option>
+                                <option value="9">9 People ($515/person)</option>
+                                <option value="10">10 People ($505/person)</option>
+                            </select>
+                        </div>
+
+                        <!-- Optional Add-ons -->
+                        <div>
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-3">Optional Add-ons & Permits</span>
+                            <div class="space-y-3">
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon-park" class="calc-addon w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Chitwan National Park Permit</span>
+                                            <span class="text-[11px] text-slate-500">Entry fee for national park zone</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$20 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon-wetlands" class="calc-addon w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Bishazari Tal Wetland Conservation Fee</span>
+                                            <span class="text-[11px] text-slate-500">Local conservation & entry fee</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$10 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon-insurance" class="calc-addon w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Local Emergency Assistance & Travel Protection</span>
+                                            <span class="text-[11px] text-slate-500">On-ground emergency coverage</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$25 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon-materials" class="calc-addon w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Community School Material Contribution</span>
+                                            <span class="text-[11px] text-slate-500">Directly funds workshop supplies & art tools for children</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$50 / group</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price Summary Card -->
+                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-4">Estimated Total</span>
+                            <div class="space-y-3 border-b border-slate-800 pb-4 mb-4 text-xs sm:text-sm">
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Base Rate (<span id="summary-count">2</span> travelers):</span>
+                                    <span id="summary-base-rate" class="font-medium">$675 / person</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Base Package Subtotal:</span>
+                                    <span id="summary-base-total" class="font-medium">$1,350</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Add-ons Total:</span>
+                                    <span id="summary-addons" class="font-medium">$0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-baseline mb-6">
+                                <span class="text-sm font-bold text-white">Grand Total:</span>
+                                <span id="summary-grand-total" class="text-2xl sm:text-3xl font-extrabold text-amber-400">$1,350</span>
+                            </div>
+                            <a href="apply.html" class="block w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs sm:text-sm py-3 rounded-xl transition shadow-lg shadow-amber-600/20">
+                                Reserve This Journey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TAB CONTENT: 15-DAY ITINERARY -->
+    <div id="content-15-day" class="tab-content hidden py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto space-y-6 sm:space-y-8">
+            
             <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                     <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 1 - 2</span>
@@ -140,13 +428,13 @@
                 </div>
                 <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Guided Himalayan Ridge Trekking & Panoramic Views</h2>
                 <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                    Embark on a 3-day guided eco-trek through pristine rural trails and rhododendron forests with views of snow-capped Himalayan peaks. Stay in local tea houses, experience mountain hospitality, and learn about flora and mountain ecology.
+                    Embark on a guided eco-trek through pristine rural trails and rhododendron forests with views of snow-capped Himalayan peaks. Stay in local tea houses, experience mountain hospitality, and learn about flora and mountain ecology.
                 </p>
             </div>
 
             <div class="bg-slate-950 p-5 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                    <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 13 - 14</span>
+                    <span class="px-3 py-1 bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider rounded-full w-max">Days 13 - 15</span>
                     <span class="text-xs sm:text-sm text-slate-400 font-medium">Return to Kathmandu & Departure</span>
                 </div>
                 <h2 class="text-lg sm:text-xl font-bold text-white mb-2">Reflection, Farewell Ceremony & Airport Transfer</h2>
@@ -154,8 +442,143 @@
                     Return drive to Kathmandu. Group reflection session and farewell dinner featuring traditional Nepali dance and music. Final shopping in Thamel and airport transfer for international flights.
                 </p>
             </div>
+
+            <!-- Integrated 15-Day Cost Calculator -->
+            <div id="calculator-15" class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-amber-500/40 shadow-2xl">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-amber-400 text-xl">🧮</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">15-Day Expedition Cost Calculator</h3>
+                </div>
+                <p class="text-slate-400 text-xs sm:text-sm mb-6">Select the number of travelers and optional add-ons to estimate your total program fee.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Calculator Inputs -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <!-- Group Size Selection -->
+                        <div>
+                            <label for="travelerCount15" class="block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-2">Number of Travelers (Max 10)</label>
+                            <select id="travelerCount15" class="w-full bg-slate-900 border border-slate-700 text-white text-sm rounded-xl p-3 focus:outline-none focus:border-amber-400 transition">
+                                <option value="1">1 Person ($1,950/person)</option>
+                                <option value="2" selected>2 People ($1,750/person)</option>
+                                <option value="3">3 People ($1,625/person)</option>
+                                <option value="4">4 People ($1,550/person)</option>
+                                <option value="5">5 People ($1,495/person)</option>
+                                <option value="6">6 People ($1,450/person)</option>
+                                <option value="7">7 People ($1,410/person)</option>
+                                <option value="8">8 People ($1,375/person)</option>
+                                <option value="9">9 People ($1,345/person)</option>
+                                <option value="10">10 People ($1,320/person)</option>
+                            </select>
+                        </div>
+
+                        <!-- Travel Essentials & Add-ons -->
+                        <div>
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-3">Travel Essentials & Experience Add-ons</span>
+                            <div class="space-y-3">
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon15-airport" value="50" checked class="calc-addon-15 w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Private Kathmandu Airport Pickup & Transfers</span>
+                                            <span class="text-[11px] text-slate-500">Dedicated private vehicle arrival/departure transfers</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$50 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon15-lang" value="100" checked class="calc-addon-15 w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Extended Intensive Language & Cultural Prep</span>
+                                            <span class="text-[11px] text-slate-500">In-depth orientation with native language instructors</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$100 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon15-porter" value="150" class="calc-addon-15 w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Dedicated Trekking Porter Support</span>
+                                            <span class="text-[11px] text-slate-500">Includes fair wage, gear & insurance for local porters</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$150 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon15-gear" value="75" class="calc-addon-15 w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Full Trekking Gear Rental Kit</span>
+                                            <span class="text-[11px] text-slate-500">Sleeping bag, heavy down jacket & trekking poles</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$75 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon15-sim" value="35" class="calc-addon-15 w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Local Nepal SIM & Data Package</span>
+                                            <span class="text-[11px] text-slate-500">High-altitude cellular connectivity & local number</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$35 / person</span>
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 bg-slate-900/80 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="checkbox" id="addon15-med" value="60" class="calc-addon-15 w-4 h-4 text-amber-500 bg-slate-950 border-slate-700 rounded focus:ring-amber-500">
+                                        <div>
+                                            <span class="text-xs sm:text-sm text-slate-200 block font-medium">Emergency Rescue & Medical Coverage Insurance</span>
+                                            <span class="text-[11px] text-slate-500">On-ground emergency mountain protection</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-slate-300">$60 / person</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price Summary Card -->
+                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-4">15-Day Estimated Total</span>
+                            <div class="space-y-3 border-b border-slate-800 pb-4 mb-4 text-xs sm:text-sm">
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Base Rate (<span id="summary15-count">2</span> travelers):</span>
+                                    <span id="summary15-base-rate" class="font-medium">$1,750 / person</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Base Package Subtotal:</span>
+                                    <span id="summary15-base-total" class="font-medium">$3,500</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Add-ons Total:</span>
+                                    <span id="summary15-addons" class="font-medium">$300</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-baseline mb-6">
+                                <span class="text-sm font-bold text-white">Grand Total:</span>
+                                <span id="summary15-grand-total" class="text-2xl sm:text-3xl font-extrabold text-amber-400">$3,800</span>
+                            </div>
+                            <a href="apply.html" class="block w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs sm:text-sm py-3 rounded-xl transition shadow-lg shadow-amber-600/20">
+                                Reserve This Journey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-800 py-10 px-4 sm:px-6 text-slate-400 text-sm">
@@ -169,9 +592,155 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
-        menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => { 
+                mobileMenu.classList.toggle('hidden'); 
+            });
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            const selectedContent = document.getElementById(`content-${tabId}`);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+
+            const selectedTabBtn = document.getElementById(`tab-${tabId}`);
+            if (selectedTabBtn) {
+                selectedTabBtn.classList.add('active');
+            }
+
+            const titleEl = document.getElementById('page-title');
+            const descEl = document.getElementById('page-description');
+
+            if (titleEl && descEl) {
+                if (tabId === '3-day') {
+                    titleEl.textContent = 'Hidden Chitwan: 3-Day Express';
+                    descEl.textContent = 'An abbreviated journey highlighting essential village connection and wildlife exploration.';
+                } else if (tabId === '4-day') {
+                    titleEl.textContent = 'Hidden Chitwan: 4-Day Journey';
+                    descEl.textContent = 'Machan Camping, Wildlife & Community Camp with Rural Children. Experience Nepal beyond sightseeing and leave something meaningful behind.';
+                } else if (tabId === '15-day') {
+                    titleEl.textContent = 'Rural Gorkha: 15 Days Journey';
+                    descEl.textContent = 'A detailed breakdown of our signature 2-week journey combining orientation, direct village service, cultural exchange, and Himalayan trekking across rural Nepal.';
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 4-Day Pricing Breakdown
+            const pricingTiers4Day = {
+                1: 795, 2: 675, 3: 625, 4: 595, 5: 575,
+                6: 555, 7: 540, 8: 525, 9: 515, 10: 505
+            };
+
+            function calculate4DayCost() {
+                const travelerSelect = document.getElementById('travelerCount');
+                if (!travelerSelect) return;
+
+                const count = parseInt(travelerSelect.value, 10) || 1;
+                const rate = pricingTiers4Day[count] || 505;
+                const baseTotal = count * rate;
+
+                let perPersonAddons = 0;
+                const parkAddon = document.getElementById('addon-park');
+                const wetlandsAddon = document.getElementById('addon-wetlands');
+                const insuranceAddon = document.getElementById('addon-insurance');
+
+                if (parkAddon && parkAddon.checked) perPersonAddons += 20;
+                if (wetlandsAddon && wetlandsAddon.checked) perPersonAddons += 10;
+                if (insuranceAddon && insuranceAddon.checked) perPersonAddons += 25;
+
+                let groupAddons = 0;
+                const materialsAddon = document.getElementById('addon-materials');
+                if (materialsAddon && materialsAddon.checked) groupAddons += 50;
+
+                const addonsTotal = (perPersonAddons * count) + groupAddons;
+                const grandTotal = baseTotal + addonsTotal;
+
+                const summaryCount = document.getElementById('summary-count');
+                const summaryBaseRate = document.getElementById('summary-base-rate');
+                const summaryBaseTotal = document.getElementById('summary-base-total');
+                const summaryAddons = document.getElementById('summary-addons');
+                const summaryGrandTotal = document.getElementById('summary-grand-total');
+
+                if (summaryCount) summaryCount.textContent = count;
+                if (summaryBaseRate) summaryBaseRate.textContent = `$${rate} / person`;
+                if (summaryBaseTotal) summaryBaseTotal.textContent = `$${baseTotal.toLocaleString()}`;
+                if (summaryAddons) summaryAddons.textContent = `$${addonsTotal.toLocaleString()}`;
+                if (summaryGrandTotal) summaryGrandTotal.textContent = `$${grandTotal.toLocaleString()}`;
+            }
+
+            // 15-Day Pricing Breakdown
+            const pricingTiers15Day = {
+                1: 1950, 2: 1750, 3: 1625, 4: 1550, 5: 1495,
+                6: 1450, 7: 1410, 8: 1375, 9: 1345, 10: 1320
+            };
+
+            function calculate15DayCost() {
+                const travelerSelect = document.getElementById('travelerCount15');
+                if (!travelerSelect) return;
+
+                const count = parseInt(travelerSelect.value, 10) || 1;
+                const rate = pricingTiers15Day[count] || 1320;
+                const baseTotal = count * rate;
+
+                let perPersonAddons = 0;
+                const addons = document.querySelectorAll('.calc-addon-15');
+                addons.forEach(addon => {
+                    if (addon.checked) {
+                        perPersonAddons += parseInt(addon.value, 10) || 0;
+                    }
+                });
+
+                const addonsTotal = perPersonAddons * count;
+                const grandTotal = baseTotal + addonsTotal;
+
+                const summaryCount = document.getElementById('summary15-count');
+                const summaryBaseRate = document.getElementById('summary15-base-rate');
+                const summaryBaseTotal = document.getElementById('summary15-base-total');
+                const summaryAddons = document.getElementById('summary15-addons');
+                const summaryGrandTotal = document.getElementById('summary15-grand-total');
+
+                if (summaryCount) summaryCount.textContent = count;
+                if (summaryBaseRate) summaryBaseRate.textContent = `$${rate.toLocaleString()} / person`;
+                if (summaryBaseTotal) summaryBaseTotal.textContent = `$${baseTotal.toLocaleString()}`;
+                if (summaryAddons) summaryAddons.textContent = `$${addonsTotal.toLocaleString()}`;
+                if (summaryGrandTotal) summaryGrandTotal.textContent = `$${grandTotal.toLocaleString()}`;
+            }
+
+            // Event Listeners for 4-Day Calculator
+            const travelerSelect4 = document.getElementById('travelerCount');
+            if (travelerSelect4) {
+                travelerSelect4.addEventListener('change', calculate4DayCost);
+            }
+            const checkboxes4 = document.querySelectorAll('.calc-addon');
+            checkboxes4.forEach(cb => cb.addEventListener('change', calculate4DayCost));
+
+            // Event Listeners for 15-Day Calculator
+            const travelerSelect15 = document.getElementById('travelerCount15');
+            if (travelerSelect15) {
+                travelerSelect15.addEventListener('change', calculate15DayCost);
+            }
+            const checkboxes15 = document.querySelectorAll('.calc-addon-15');
+            checkboxes15.forEach(cb => cb.addEventListener('change', calculate15DayCost));
+
+            // Run initial calculations
+            calculate4DayCost();
+            calculate15DayCost();
+        });
     </script>
 </body>
 </html>
