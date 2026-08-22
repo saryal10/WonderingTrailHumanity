@@ -59,9 +59,9 @@
                 <a href="events.html" class="hover:text-amber-400 transition">Events</a>
                 <a href="programs.html" class="hover:text-amber-400 transition">Programs</a>
                 <a href="itinerary.html" class="hover:text-amber-400 transition">Recommended Itinerary</a>
-            <a href="about.html" class="text-amber-400 font-semibold transition">Meet Our Team</a>
-            <a href="donate.html" class="hover:text-amber-400 transition">Donate</a> 
-        </nav>
+                <a href="about.html" class="text-amber-400 font-semibold transition">Meet Our Team</a>
+                <a href="donate.html" class="hover:text-amber-400 transition">Donate</a> 
+            </nav>
 
             <div class="flex items-center gap-3">
                 <a href="apply.html" class="hidden sm:inline-block bg-amber-600 hover:bg-amber-500 text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition shadow-lg shadow-amber-600/20">
@@ -74,14 +74,14 @@
         </div>
 
         <!-- Mobile Menu Navigation -->
-       <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3">
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3">
             <a href="index.html#about" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Our Mission</a>
             <a href="index.html#stories" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Impact Videos</a>
             <a href="events.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Events</a>
             <a href="programs.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Programs</a>
             <a href="itinerary.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Recommended Itinerary</a>
             <a href="about.html" class="block text-amber-400 font-semibold text-sm py-1">Meet Our Team</a>
-             <a href="donate.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Donate</a>
+            <a href="donate.html" class="block text-slate-300 hover:text-amber-400 text-sm font-medium py-1">Donate</a>
         </div>
     </header>
 
@@ -100,144 +100,155 @@
         </div>
     </section>
 
-    <!-- Team Members Gallery Section (10 Persons Grid) -->
+    <!-- Team Members Hierarchical Section -->
     <section class="py-20 px-4 sm:px-6 bg-slate-900">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-6xl mx-auto space-y-16">
             
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
                 <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Our Leadership & Crew</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-serif">Meet Our Team</h2>
                 <div class="w-12 h-0.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <!-- 10-Card Responsive Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <!-- Tier 1: Sujan Budhathoki (Top Row - Single Centered Lead with Smaller Image) -->
+            <div class="flex justify-center">
+                <div class="w-full max-w-[240px] sm:max-w-[260px] group relative rounded-2xl overflow-hidden bg-slate-950 border-2 border-amber-500/80 shadow-2xl shadow-amber-500/15 transition-all duration-300 flex flex-col justify-end">
+                    <div class="absolute top-2.5 right-2.5 z-20 bg-amber-500 text-slate-950 text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-md">
+                        Primary POC
+                    </div>
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="img/sujan.jpg" alt="Sujan Budhathoki" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Sujan Budhathoki</h3>
+                        <p class="text-[11px] text-amber-400 font-semibold tracking-wider uppercase mt-0.5">Operation and Community Outreach Lead / Artist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 2: Rikesh Koirala & Sarad Aryal (Second Row - Two Leaders Side-by-Side) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[540px] mx-auto">
                 
-                <!-- Person 1 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="img/rikesh.jpg" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <!-- Rikesh Koirala -->
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="img/rikesh.jpg" alt="Rikesh Koirala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                     </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Rikesh Koirala</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Co-Founder & Director</p>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Toursim Entrepreneur/Engineer</p>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Rikesh Koirala</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Co-Founder & Director</p>
+                        <p class="text-[10px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Tourism Entrepreneur / Engineer</p>
                     </div>
                 </div>
 
-                <!-- Person 2 -->
-
-                    <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="img/sujan.jpg" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <!-- Sarad Aryal -->
+                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="img/sarad.jpg" alt="Sarad Aryal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                     </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Sujan Budhathoki</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Operation and Community Outreach Lead/Artist</p>
-                    </div>
-                </div>
-
-                <!-- Person 3 -->
-                 <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="img/sarad.jpg" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Sarad Aryal</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">International Outreach - USA</p>
-                         <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Toursim Entrepreneur/Engineer</p>
-                    </div>
-                </div>
-
-                <!-- Person 4 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="img/aaku.jpg" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Anil Raut</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Education Coordinator</p>
-                    </div>
-                </div>
-
-                <!-- Person 5 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="img/prawesh.jpg" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Dr. Prawesh Koirala</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Member</p>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Dentist</p>
-                    </div>
-                </div>
-
-                <!-- Person 6 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="https://i.pravatar.cc/400?img=26" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Maya Tamang</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Youth Workshop Lead</p>
-                    </div>
-                </div>
-
-                <!-- Person 7 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="https://i.pravatar.cc/400?img=59" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Prashant Thapa</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Logistics Lead</p>
-                    </div>
-                </div>
-
-                <!-- Person 8 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="https://i.pravatar.cc/400?img=32" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Kiran Shrestha</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Health Post Liaison</p>
-                    </div>
-                </div>
-
-                <!-- Person 9 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="https://i.pravatar.cc/400?img=68" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Bikash Rai</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Field Safety Officer</p>
-                    </div>
-                </div>
-
-                <!-- Person 10 -->
-                <div class="group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
-                    <div class="aspect-[4/5] relative overflow-hidden bg-slate-800">
-                        <img src="https://i.pravatar.cc/400?img=49" alt="Team Member Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 p-5 text-center z-10">
-                        <h3 class="text-lg font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Srijana Adhikari</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Volunteer Relations</p>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Sarad Aryal</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">International Outreach - USA</p>
+                        <p class="text-[10px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Tourism Entrepreneur / Engineer</p>
                     </div>
                 </div>
 
             </div>
+
+            <div class="border-t border-slate-800/80 my-8 max-w-xl mx-auto"></div>
+
+            <!-- Tier 3: All Other Team Members (Third Row - Perfectly Centered Flex Grid) -->
+            <div class="flex flex-wrap justify-center gap-6">
+                
+                <!-- Anil Raut -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="img/aaku.jpg" alt="Anil Raut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Anil Raut</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Education Coordinator</p>
+                    </div>
+                </div>
+
+                <!-- Dr. Prawesh Koirala -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="img/prawesh.jpg" alt="Dr. Prawesh Koirala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Dr. Prawesh Koirala</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Member / Dentist</p>
+                    </div>
+                </div>
+
+                <!-- Maya Tamang -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="https://i.pravatar.cc/400?img=26" alt="Maya Tamang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Maya Tamang</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Youth Workshop Lead</p>
+                    </div>
+                </div>
+
+                <!-- Prashant Thapa -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="https://i.pravatar.cc/400?img=59" alt="Prashant Thapa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Prashant Thapa</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Logistics Lead</p>
+                    </div>
+                </div>
+
+                <!-- Kiran Shrestha -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="https://i.pravatar.cc/400?img=32" alt="Kiran Shrestha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Kiran Shrestha</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Health Post Liaison</p>
+                    </div>
+                </div>
+
+                <!-- Bikash Rai -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="https://i.pravatar.cc/400?img=68" alt="Bikash Rai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Bikash Rai</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Field Safety Officer</p>
+                    </div>
+                </div>
+
+                <!-- Srijana Adhikari -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] max-w-[240px] group relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 shadow-xl flex flex-col justify-end">
+                    <div class="aspect-[3/4] relative overflow-hidden bg-slate-800">
+                        <img src="https://i.pravatar.cc/400?img=49" alt="Srijana Adhikari" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 text-center z-10">
+                        <h3 class="text-base font-bold text-white font-serif group-hover:text-amber-400 transition-colors">Srijana Adhikari</h3>
+                        <p class="text-[11px] text-emerald-400 font-semibold tracking-wider uppercase mt-0.5">Volunteer Relations</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
